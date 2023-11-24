@@ -1,24 +1,22 @@
 <?php
 
 include_once(dirname(__FILE__) . '/../../class/include.php');
+
 include_once(dirname(__FILE__) . '/../auth.php');
 
 
-if (isset($_POST['add-city'])) {
-
-    $CITY = New City(NULL);
+if (isset($_POST['add-district'])) {
+    $DISTRICT = new District(NULL);
     $VALID = new Validator();
 
-    $CITY->district = $_POST['district'];
-    $CITY->name = $_POST['name'];
+    $DISTRICT->name = filter_input(INPUT_POST, 'name');
 
-    $VALID->check($CITY, [
-        'district' => ['required' => TRUE],
-        'name' => ['required' => TRUE],
+    $VALID->check($DISTRICT, ['name' =>
+            ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
-        $CITY->create();
+        $DISTRICT->create();
 
         if (!isset($_SESSION)) {
             session_start();
@@ -39,19 +37,19 @@ if (isset($_POST['add-city'])) {
     }
 }
 
-if (isset($_POST['edit-city'])) {
+if (isset($_POST['edit-district'])) {
+    $DISTRICT = new District(NULL);
 
-    $CITY = New City($_POST['id']);
+    $DISTRICT->id = $_POST['id'];
+    $DISTRICT->name = $_POST['name'];
+
     $VALID = new Validator();
-
-    $CITY->name = $_POST['name'];
-
-    $VALID->check($CITY, [
-        'name' => ['required' => TRUE],
+    $VALID->check($DISTRICT, ['name' =>
+            ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
-        $CITY->update();
+        $DISTRICT->update();
 
         if (!isset($_SESSION)) {
             session_start();
@@ -71,6 +69,3 @@ if (isset($_POST['edit-city'])) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
-
-
-

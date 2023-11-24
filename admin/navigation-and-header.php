@@ -83,8 +83,8 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                
-                  <li>
+
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">supervisor_account</i>
                         <span>Vendors</span>
@@ -104,152 +104,10 @@
                         </li>
                     </ul>
                 </li>
-             
-<!--                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">hotel</i>
-                        <span>Accommodation</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-accommodation.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-accommodation.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <i class="material-icons">chevron_right</i>
-                                <span>Accommodation Type</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="create-accommodation-type.php">
-                                        <i class="material-icons">add</i>
-                                        <span>Add New</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="manage-accommodation-type.php">
-                                        <i class="material-icons">list</i>
-                                        <span>Manage</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <i class="material-icons">chevron_right</i>
-                                <span>Accommodation Facilities</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="create-accommodation-general-facilities-types.php">
-                                        <i class="material-icons">add</i>
-                                        <span>Add</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="manage-accommodation-genaral-facilities-types.php">
-                                        <i class="material-icons">list</i>
-                                        <span>Manage</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0);" class="menu-toggle">
-                                <i class="material-icons">chevron_right</i>
-                                <span>Room Facilities</span>
-                            </a>
-                            <ul class="ml-menu">
-                                <li>
-                                    <a href="create-room-facility-types.php">
-                                        <i class="material-icons">add</i>
-                                        <span>Add</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="manage-room-facility-types.php">
-                                        <i class="material-icons">list</i>
-                                        <span>Manage</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">local_offer</i>
-                        <span>Offer</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-offer.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-offer.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-offer.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">event_available</i>
-                        <span>Booking</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="manage-trasport-booking.php">
-                                <i class="material-icons">directions_car</i>
-                                <span>Transports</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-rentercar-booking.php">
-                                <i class="material-icons">departure_board</i>
-                                <span>Rent a Cars</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="create-offer.php">
-                                <i class="material-icons">airline_seat_individual_suite</i>
-                                <span>Accommodation</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="create-offer.php">
-                                <i class="material-icons">map</i>
-                                <span>Tour Packages</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-               
-              
-                <li>
+ <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">person_outline</i>
-                        <span>Visitor</span>
+                        <span>Visitors</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -266,8 +124,151 @@
                         </li>
                     </ul>
                 </li>
--->                
-<li>
+
+                <!--                <li>
+                                    <a href="javascript:void(0);" class="menu-toggle">
+                                        <i class="material-icons">hotel</i>
+                                        <span>Accommodation</span>
+                                    </a>
+                                    <ul class="ml-menu">
+                                        <li>
+                                            <a href="create-accommodation.php">
+                                                <i class="material-icons">add</i>
+                                                <span>Add New</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="manage-accommodation.php">
+                                                <i class="material-icons">list</i>
+                                                <span>Manage</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="menu-toggle">
+                                                <i class="material-icons">chevron_right</i>
+                                                <span>Accommodation Type</span>
+                                            </a>
+                                            <ul class="ml-menu">
+                                                <li>
+                                                    <a href="create-accommodation-type.php">
+                                                        <i class="material-icons">add</i>
+                                                        <span>Add New</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="manage-accommodation-type.php">
+                                                        <i class="material-icons">list</i>
+                                                        <span>Manage</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="menu-toggle">
+                                                <i class="material-icons">chevron_right</i>
+                                                <span>Accommodation Facilities</span>
+                                            </a>
+                                            <ul class="ml-menu">
+                                                <li>
+                                                    <a href="create-accommodation-general-facilities-types.php">
+                                                        <i class="material-icons">add</i>
+                                                        <span>Add</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="manage-accommodation-genaral-facilities-types.php">
+                                                        <i class="material-icons">list</i>
+                                                        <span>Manage</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                
+                                        <li>
+                                            <a href="javascript:void(0);" class="menu-toggle">
+                                                <i class="material-icons">chevron_right</i>
+                                                <span>Room Facilities</span>
+                                            </a>
+                                            <ul class="ml-menu">
+                                                <li>
+                                                    <a href="create-room-facility-types.php">
+                                                        <i class="material-icons">add</i>
+                                                        <span>Add</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="manage-room-facility-types.php">
+                                                        <i class="material-icons">list</i>
+                                                        <span>Manage</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="menu-toggle">
+                                        <i class="material-icons">local_offer</i>
+                                        <span>Offer</span>
+                                    </a>
+                                    <ul class="ml-menu">
+                                        <li>
+                                            <a href="create-offer.php">
+                                                <i class="material-icons">add</i>
+                                                <span>Add New</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="manage-offer.php">
+                                                <i class="material-icons">list</i>
+                                                <span>Manage</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="arrange-offer.php">
+                                                <i class="material-icons">compare_arrows</i>
+                                                <span>Arrange</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="menu-toggle">
+                                        <i class="material-icons">event_available</i>
+                                        <span>Booking</span>
+                                    </a>
+                                    <ul class="ml-menu">
+                                        <li>
+                                            <a href="manage-trasport-booking.php">
+                                                <i class="material-icons">directions_car</i>
+                                                <span>Transports</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="manage-rentercar-booking.php">
+                                                <i class="material-icons">departure_board</i>
+                                                <span>Rent a Cars</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="create-offer.php">
+                                                <i class="material-icons">airline_seat_individual_suite</i>
+                                                <span>Accommodation</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="create-offer.php">
+                                                <i class="material-icons">map</i>
+                                                <span>Tour Packages</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                               
+                              
+                -->                
+               
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">pin_drop</i>
                         <span>Location Manager</span>
