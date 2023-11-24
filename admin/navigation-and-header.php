@@ -125,10 +125,10 @@
                     </ul>
                 </li>
 
-                <!--                <li>
+                                <li>
                                     <a href="javascript:void(0);" class="menu-toggle">
-                                        <i class="material-icons">hotel</i>
-                                        <span>Accommodation</span>
+                                        <i class="material-icons">share_location</i>
+                                        <span>Venues</span>
                                     </a>
                                     <ul class="ml-menu">
                                         <li>
@@ -146,17 +146,17 @@
                                         <li>
                                             <a href="javascript:void(0);" class="menu-toggle">
                                                 <i class="material-icons">chevron_right</i>
-                                                <span>Accommodation Type</span>
+                                                <span>Venue Types</span>
                                             </a>
                                             <ul class="ml-menu">
                                                 <li>
-                                                    <a href="create-accommodation-type.php">
+                                                    <a href="create-venue-type.php">
                                                         <i class="material-icons">add</i>
                                                         <span>Add New</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="manage-accommodation-type.php">
+                                                    <a href="manage-venue-type.php">
                                                         <i class="material-icons">list</i>
                                                         <span>Manage</span>
                                                     </a>
@@ -166,7 +166,7 @@
                                         <li>
                                             <a href="javascript:void(0);" class="menu-toggle">
                                                 <i class="material-icons">chevron_right</i>
-                                                <span>Accommodation Facilities</span>
+                                                <span>Venue Facilities</span>
                                             </a>
                                             <ul class="ml-menu">
                                                 <li>
@@ -184,7 +184,7 @@
                                             </ul>
                                         </li>
                 
-                                        <li>
+<!--                                        <li>
                                             <a href="javascript:void(0);" class="menu-toggle">
                                                 <i class="material-icons">chevron_right</i>
                                                 <span>Room Facilities</span>
@@ -203,9 +203,10 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li>-->
                                     </ul>
                                 </li>
+                                <!--
                                 <li>
                                     <a href="javascript:void(0);" class="menu-toggle">
                                         <i class="material-icons">local_offer</i>
