@@ -90,7 +90,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
-                                   
+
                                     <!--Home Address-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -104,6 +104,25 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div> 
+                                    <div class="row clearfix">
+                                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                            <label for="city">District</label>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                            <div class="form-group place-select">
+                                                <div class="form-line">
+                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="district" autocomplete="off" name="district" required="TRUE">
+                                                        <option value=""> -- Please Select -- </option>
+                                                        <?php foreach (District::all() as $key => $district) {
+                                                            ?>
+                                                            <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option><?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!-- city-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -112,13 +131,10 @@ include_once(dirname(__FILE__) . './auth.php');
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group place-select">
                                                 <div class="form-line">
-                                                    <select class="form-control place-select1 show-tick" autocomplete="off" type="text" id="city" autocomplete="off" name="city" required="TRUE">
-                                                        <option value=""> -- Please Select -- </option>
-                                                        <?php foreach (City::all() as $key => $city) {
-                                                            ?>
-                                                            <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option><?php
-                                                        }
-                                                        ?>
+
+                                                    <select class="form-control place-select1 show-tick" type="text" id="city-bar" name="city">
+                                                        <option value="">-- Select District First --</option>
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -150,7 +166,7 @@ include_once(dirname(__FILE__) . './auth.php');
                                             </div>
                                         </div>
                                     </div>
-                              
+
                                     <!--Password-->
                                     <div class="row clearfix">
                                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
@@ -190,6 +206,7 @@ include_once(dirname(__FILE__) . './auth.php');
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+        <script src="js/city.js" type="text/javascript"></script>
         <script>
             tinymce.init({
                 selector: "#description",
