@@ -7,7 +7,7 @@ $(document).ready(function () {
      
         $('#city-bar').empty();
         $.ajax({
-            url: "post-and-get/city.php",
+            url: "post-and-get/city_list.php",
             type: "POST",
             data: {
                 district: disID,
