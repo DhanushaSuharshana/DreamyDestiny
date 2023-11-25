@@ -17,8 +17,6 @@
             </div>
             <div class="col-md-6 top-links">
                 <ul class="listnone">
-                    <li><a href="faq.html"> Help </a></li>
-                    <li><a href="pricing-plan.html">Pricing</a></li>
                     <li><a href="signup-couple.html" class=" ">I m couple</a></li>
                     <li><a href="signup-vendor.html">Are you vendor?</a></li>
                     <li><a href="login-page.html">Log in</a></li>
