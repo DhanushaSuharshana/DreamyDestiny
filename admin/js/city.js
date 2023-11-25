@@ -1,10 +1,9 @@
 $(document).ready(function () {
     $('#district').change(function () {
-
+       
 
         var disID = $(this).val();
 
-     
         $('#city-bar').empty();
         $.ajax({
             url: "post-and-get/city_list.php",
