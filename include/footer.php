@@ -26,8 +26,8 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Enter E-Mail Address" required>
                         <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Submit</button>
-        </span> </div>
+                        <button class="btn btn-default" type="button">Submit</button>
+                        </span> </div>
                     <!-- /input-group -->
                     <!-- /.col-lg-6 -->
                 </form>

@@ -3,13 +3,13 @@
         <div class="row">
             <div class="col-md-3 col-sm-12 logo">
                 <div class="navbar-brand">
-                    <a href="index.html"><img src="images/logo.png" alt="Wedding Vendors" class="img-responsive"></a>
+                    <a href="index.php"><img src="images/logo.png" alt="Wedding Vendors" class="img-responsive"></a>
                 </div>
             </div>
             <div class="col-md-9 col-sm-12">
                 <div class="navigation" id="navigation">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
                         <!--li><a href="#">Listing</a></li>
                         <li><a href="vendor-details.html">Vendor</a>
                             <ul>
@@ -18,10 +18,10 @@
                                 <li><a href="vendor-profile.html">Vendor Profile</a></li>
                             </ul>
                         </li-->
-                        <li><a href="venue-listing.html" title="Home" class="animsition-link">Suppliers</a>
+                        <li><a href="venue-listing.php" title="Home" class="animsition-link">Suppliers</a>
                             <ul>
                                 <!-- Fetch all the services  -->
-                                <li><a href="venue-listing.html">Venue List</a></li>
+                                <li><a href="venue-listing.php">Venue List</a></li>
                                 <li><a href="photography-listing.html">Photographer List</a></li>
                                 <li><a href="dresses-listing.html">Dresses List</a></li>
                                 <li><a href="florist-listing.html">Florist List</a></li>
