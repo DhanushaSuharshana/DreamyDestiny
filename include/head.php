@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
-    <!-- Wedding venue CSS -->
+    <!-- venue list | vendor list | Signup-couple CSS -->
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <!-- Font used in template -->
