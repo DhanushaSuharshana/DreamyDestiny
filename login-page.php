@@ -59,7 +59,7 @@
                             <!-- Button -->
                             <div class="form-group">
                                 <button id="submit" name="submit" class="btn btn-primary btn-lg">Login</button>
-                                <a href="forget-password.html" class="pull-right"> <small>Forgot Password ?</small></a>
+                                <a href="forget-password.php" class="pull-right"> <small>Forgot Password ?</small></a>
                             </div>
                         </form>
                     </div>
