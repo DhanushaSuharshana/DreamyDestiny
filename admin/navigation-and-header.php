@@ -132,13 +132,13 @@
                                     </a>
                                     <ul class="ml-menu">
                                         <li>
-                                            <a href="create-accommodation.php">
+                                            <a href="create-venue.php">
                                                 <i class="material-icons">add</i>
                                                 <span>Add New</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="manage-accommodation.php">
+                                            <a href="manage-venue.php">
                                                 <i class="material-icons">list</i>
                                                 <span>Manage</span>
                                             </a>
@@ -170,13 +170,13 @@
                                             </a>
                                             <ul class="ml-menu">
                                                 <li>
-                                                    <a href="create-accommodation-general-facilities-types.php">
+                                                    <a href="create-venue-general-facilities-types.php">
                                                         <i class="material-icons">add</i>
                                                         <span>Add</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="manage-accommodation-genaral-facilities-types.php">
+                                                    <a href="manage-venue-genaral-facilities-types.php">
                                                         <i class="material-icons">list</i>
                                                         <span>Manage</span>
                                                     </a>
