@@ -14,6 +14,11 @@
 <script type="text/javascript" src="js/price-slider.js"></script--> 
 <!-- conflicted with index Flex Nav script -->
 
+<!-- Flex Nav Script for vendor listing-->
+<!-- <script src="js/navigation.js"></script>
+<script src="../../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script type="text/javascript" src="js/price-slider.js"></script> -->
+
 <!-- slider -->
 <script src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>

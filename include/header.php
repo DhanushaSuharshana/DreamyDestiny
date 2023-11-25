@@ -18,7 +18,7 @@
                                 <li><a href="vendor-profile.html">Vendor Profile</a></li>
                             </ul>
                         </li-->
-                        <li><a href="venue-listing.php" title="Home" class="animsition-link">Suppliers</a>
+                        <li><a href="vendor-list.php" title="Home" class="animsition-link">Vendor Listing</a>
                             <ul>
                                 <!-- Fetch all the services  -->
                                 <li><a href="venue-listing.php">Venue List</a></li>
