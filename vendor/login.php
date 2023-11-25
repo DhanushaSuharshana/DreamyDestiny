@@ -1,14 +1,13 @@
+<?php
+include_once(dirname(__FILE__) . '/../class/include.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
-
-
-    <!-- Mirrored from jituchauhan.com/wedding/wedding-new/login-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 11:16:21 GMT -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Wedding Vendor | Find The Best Wedding Vendors</title>
+        <title>Dreamy Destiny</title>
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Template style.css -->
@@ -21,6 +20,7 @@
         <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- favicon icon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -68,7 +68,6 @@
                     </div>
                     <div class="col-md-9">
                         <div class="navigation" id="navigation">
-
                             <ul>
                                 <li class="active"><a href="index.html">Home</a>
                                     <ul>
@@ -163,23 +162,22 @@
                     <div class="col-md-offset-2 col-md-8">
                         <div class="page-header text-center">
                             <div class="icon-circle">
-                                <i class="icon icon-size-60 icon-padlock-1 icon-white"></i>
+                                <i class="icon icon-size-60 icon-curtains icon-white"></i>
                             </div>
-                            <h1>Welcome back to your account</h1>
-                            <p>We're happy to have you back.</p>
+                            <h1>Are you Supplier - Start Business</h1>
+                            <p>Wedding Vendor works with thousands of wedding vendors Sri Lanka.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.page header -->
         <div class="tp-breadcrumb">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
                         <ol class="breadcrumb">
                             <li><a href="#">Home</a></li>
-                            <li class="active">Login Page</li>
+                            <li class="active">Sing Up Vendor</li>
                         </ol>
                     </div>
                 </div>
@@ -188,54 +186,88 @@
         <div class="main-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 st-tabs">
-                        <!-- Nav tabs -->
+                    <div class="col-md-7">
                         <div class="well-box">
-                            <h3>Vendor Login</h3>
-                            <form>
+                            <form method="post" id="register"> 
+                                <h2>Vendor Registration</h2>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label" for="name">User Name<span class="required">*</span></label>
+                                    <input id="name" type="text" name="name" placeholder="Enter Your Name" autocomplete="off" type="text" class="form-control input-md">
+                                </div>
                                 <!-- Text input-->
                                 <div class="form-group">
                                     <label class="control-label" for="email">E-mail<span class="required">*</span></label>
-                                    <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md" required>
+                                    <input id="email" type="text" name="email" placeholder="Enter Your Email" autocomplete="off" class="form-control input-md">
                                 </div>
-                                <!-- Text input-->
                                 <div class="form-group">
-                                    <label class="control-label" for="password">Password<span class="required">*</span></label>
-                                    <input id="password" name="password" type="text" placeholder="Password" class="form-control input-md" required>
+                                    <label class="control-label" for="email">Confirm E-mail<span class="required">*</span></label>
+                                    <input id="cnfemail" type="text" name="cnfemail" placeholder="Confirm Email" autocomplete="off" class="form-control input-md">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Contact Number<span class="required">*</span></label>
+                                    <input id="contact_no" type="text" placeholder="Contact Number" name="contact_number" autocomplete="off" class="form-control input-md">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Password<span class="required">*</span></label>
+                                    <input id="password" name="password" placeholder="Enter Password" autocomplete="off" type="password" class="form-control input-md">
+                                </div>
+                                <div class="form-group">
+                                    <div class="error-msg">
+                                        <div class="text-danger" id="message"></div>
+                                    </div>
                                 </div>
                                 <!-- Button -->
                                 <div class="form-group">
-                                    <button id="submit" name="submit" class="btn btn-primary btn-lg">Login</button>
-                                    <a href="forget-password.html" class="pull-right"> <small>Forgot Password ?</small></a>
+
+                                    <input type="hidden" name="save" value="save"/>
+                                    <button name="submit" id="btnSubmit" class="btn btn-primary btn-lg">create an account</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="well-box social-login"> <a href="#" class="btn facebook-btn"><i class="fa fa-facebook-square"></i>Facebook</a> <a href="#" class="btn twitter-btn"><i class="fa fa-twitter-square"></i>Twitter</a> <a href="#" class="btn google-btn"><i class="fa fa-google-plus-square"></i>Google+</a> </div>
                     </div>
-                    <div class="col-md-6 st-tabs">
-                        <!-- Nav tabs -->
+                    <div class="col-md-5">
                         <div class="well-box">
-                            <h3>Couple Login</h3>
-                            <form>
+
+                            <?php
+                            if (isset($_GET['message'])) {
+
+                                $MESSAGE = New Message($_GET['message']);
+                                ?>
+                                <div class="alert alert-<?php echo $MESSAGE->status; ?>" role = "alert">
+                                    <?php echo $MESSAGE->description; ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                           
+
+                            <h3>Vendor Login</h3>
+                            <form action="post-and-get/vendor.php" method="POST">
                                 <!-- Text input-->
                                 <div class="form-group">
-                                    <label class="control-label" for="email">E-mail<span class="required">*</span></label>
-                                    <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md" required>
+                                    <label class="control-label" for="email">E-mail</label>
+                                    <input id="email" type="email" name="useremail" placeholder="E-Mail" class="form-control input-md" required>
                                 </div>
                                 <!-- Text input-->
                                 <div class="form-group">
-                                    <label class="control-label" for="password">Password<span class="required">*</span></label>
+                                    <label class="control-label" for="password">Password</label>
                                     <input id="password" name="password" type="text" placeholder="Password" class="form-control input-md" required>
                                 </div>
                                 <!-- Button -->
                                 <div class="form-group">
-                                    <button id="submit" name="submit" class="btn btn-primary btn-lg">Login</button>
+                                    <input class="btn btn-sm member-login-btn" name="login" value="Login"type="submit">
                                     <a href="forget-password.html" class="pull-right"> <small>Forgot Password ?</small></a>
                                 </div>
                             </form>
+
+                            <div class="well-box social-login text-center">
+
+                                <a href="#" class="btn facebook-btn"><i class="fa fa-facebook-square"></i>Facebook</a> <a href="#" class="btn google-btn"><i class="fa fa-google-plus-square"></i>Google+</a> </div>
+
                         </div>
-                        <div class="well-box social-login"> <a href="#" class="btn facebook-btn"><i class="fa fa-facebook-square"></i>Facebook</a> <a href="#" class="btn twitter-btn"><i class="fa fa-twitter-square"></i>Twitter</a> <a href="#" class="btn google-btn"><i class="fa fa-google-plus-square"></i>Google+</a> </div>
-                    
+
+
                     </div>
                 </div>
             </div>
@@ -293,17 +325,18 @@
                 </div>
             </div>
         </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Flex Nav Script -->
-        <script src="js/jquery.flexnav.js" type="text/javascript"></script>
-        <script src="js/navigation.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/header-sticky.js"></script>
-    </body>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Flex Nav Script -->
+    <script src="js/jquery.flexnav.js" type="text/javascript"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/header-sticky.js"></script>
 
-
-    <!-- Mirrored from jituchauhan.com/wedding/wedding-new/login-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 11:16:21 GMT -->
+    <script src="js/add-member.js" type="text/javascript"></script>
+    <script src="plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+</body>
 </html>

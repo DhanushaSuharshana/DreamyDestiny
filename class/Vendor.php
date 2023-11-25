@@ -86,7 +86,8 @@ class Vendor {
                 . "`contact_number` ='" . $this->contact_number . "', "
                 . "`home_address` ='" . $this->home_address . "', "
                 . "`city` ='" . $this->city . "', "
-               . "`status` ='" . $this->status . "' "
+                . "`about_me` ='" . $this->about_me . "', "
+                . "`status` ='" . $this->status . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
@@ -166,178 +167,196 @@ class Vendor {
       }
       }
 
-      public function login($useremail, $password) {
+     */
 
-      $query = "SELECT `id`,`name`,`email`,`profile_picture` FROM `vendor` WHERE `email`= '" . $useremail . "' AND `password`= '" . $password . "'";
+    public function login($useremail, $password) {
 
-      $db = new Database();
+        $query = "SELECT `id`,`name`,`email`,`profile_picture` FROM `vendor` WHERE `email`= '" . $useremail . "' AND `password`= '" . $password . "'";
 
-      $result = mysql_fetch_array($db->readQuery($query));
+        $db = new Database();
 
-      if (!$result) {
-      return FALSE;
-      } else {
+        $result = mysql_fetch_array($db->readQuery($query));
 
-      $this->id = $result['id'];
-      $this->setAuthToken($result['id']);
-      $member = $this->__construct($this->id);
+        if (!$result) {
+            return FALSE;
+        } else {
 
-      $this->setUserSession($member);
+            $this->id = $result['id'];
+            $this->setAuthToken($result['id']);
+            $vendor = $this->__construct($this->id);
 
-      return $member;
-      }
-      }
+            $this->setUserSession($vendor);
 
-      private function setAuthToken($id) {
+            return $vendor;
+        }
+    }
 
-      $authToken = md5(uniqid(rand(), true));
+    private function setAuthToken($id) {
 
-      $query = "UPDATE `vendor` SET `authToken` ='" . $authToken . "' WHERE `id`='" . $id . "'";
+        $authToken = md5(uniqid(rand(), true));
 
-      $db = new Database();
+        $query = "UPDATE `vendor` SET `authToken` ='" . $authToken . "' WHERE `id`='" . $id . "'";
 
-      if ($db->readQuery($query)) {
+        $db = new Database();
 
-      return $authToken;
-      } else {
-      return FALSE;
-      }
-      }
+        if ($db->readQuery($query)) {
 
-      private function setUserSession($member) {
+            return $authToken;
+        } else {
+            return FALSE;
+        }
+    }
 
-      if (!isset($_SESSION)) {
-      session_start();
-      session_unset($_SESSION);
-      }
-      unset($_SESSION["id"]);
-      unset($_SESSION["name"]);
-      unset($_SESSION["email"]);
-      unset($_SESSION["profile_picture"]);
-      unset($_SESSION["authToken"]);
-      unset($_SESSION["login"]);
-      unset($_SESSION["isPhoneVerified"]);
+    private function setUserSession($vendor) {
 
-      $_SESSION["login"] = TRUE;
-      $_SESSION["id"] = $member->id;
-      $_SESSION["name"] = $member->name;
-      $_SESSION["email"] = $member->email;
-      $_SESSION["profile_picture"] = $member->profile_picture;
-      $_SESSION["authToken"] = $member->authToken;
-      $_SESSION["isPhoneVerified"] = $member->isPhoneVerified;
-      $_SESSION["member"] = TRUE;
-      }
+        if (!isset($_SESSION)) {
+            session_start();
+            session_unset($_SESSION);
+        }
+        unset($_SESSION["id"]);
+        unset($_SESSION["name"]);
+        unset($_SESSION["email"]);
+        unset($_SESSION["profile_picture"]);
+        unset($_SESSION["authToken"]);
+        unset($_SESSION["login"]);
+        unset($_SESSION["status"]);
 
-      public function authenticate() {
+        $_SESSION["login"] = TRUE;
+        $_SESSION["id"] = $vendor->id;
+        $_SESSION["name"] = $vendor->name;
+        $_SESSION["email"] = $vendor->email;
+        $_SESSION["profile_picture"] = $vendor->profile_picture;
+        $_SESSION["authToken"] = $vendor->authToken;
+        $_SESSION["status"] = $vendor->status;
+        $_SESSION["vendor"] = TRUE;
+    }
 
-      if (!isset($_SESSION)) {
-      session_start();
-      }
+    public function authenticate() {
 
-      $id = NULL;
-      $authToken = NULL;
+        if (!isset($_SESSION)) {
+            session_start();
+        }
 
-      if (isset($_SESSION["id"])) {
-      $id = $_SESSION["id"];
-      }
+        $id = NULL;
+        $authToken = NULL;
 
-      if (isset($_SESSION["authToken"])) {
-      $authToken = $_SESSION["authToken"];
-      }
+        if (isset($_SESSION["id"])) {
+            $id = $_SESSION["id"];
+        }
 
-      $query = "SELECT `id` FROM `vendor` WHERE `id`= '" . $id . "' AND `authToken`= '" . $authToken . "'";
+        if (isset($_SESSION["authToken"])) {
+            $authToken = $_SESSION["authToken"];
+        }
 
-      $db = new Database();
+        $query = "SELECT `id` FROM `vendor` WHERE `id`= '" . $id . "' AND `authToken`= '" . $authToken . "'";
 
-      $result = mysql_fetch_array($db->readQuery($query));
+        $db = new Database();
 
-      if (!$result) {
-      return FALSE;
-      } else {
+        $result = mysql_fetch_array($db->readQuery($query));
 
-      return TRUE;
-      }
-      }
+        if (!$result) {
+            return FALSE;
+        } else {
 
-      public function logOut() {
+            return TRUE;
+        }
+    }
 
-      if (!isset($_SESSION)) {
-      session_start();
-      }
+    public function logOut() {
 
-      unset($_SESSION["id"]);
-      unset($_SESSION["name"]);
-      unset($_SESSION["email"]);
-      //        unset($_SESSION["nic_number"]);
-      //        unset($_SESSION["date_of_birthday"]);
-      //        unset($_SESSION["contact_number"]);
-      //        unset($_SESSION["driving_licence_number"]);
-      //        unset($_SESSION["home_address"]);
-      //        unset($_SESSION["city"]);
-      unset($_SESSION["profile_picture"]);
-      //        unset($_SESSION["username"]);
-      //        unset($_SESSION["password"]);
-      //        unset($_SESSION["status"]);
-      unset($_SESSION["authToken"]);
-      //        unset($_SESSION["rank"]);
-      unset($_SESSION["login"]);
-      unset($_SESSION["isPhoneVerified"]);
-      return TRUE;
-      }
+        if (!isset($_SESSION)) {
+            session_start();
+        }
 
+        unset($_SESSION["id"]);
+        unset($_SESSION["name"]);
+        unset($_SESSION["email"]);
+        //        unset($_SESSION["nic_number"]);
+        //        unset($_SESSION["date_of_birthday"]);
+        //        unset($_SESSION["contact_number"]);
+        //        unset($_SESSION["driving_licence_number"]);
+        //        unset($_SESSION["home_address"]);
+        //        unset($_SESSION["city"]);
+        unset($_SESSION["profile_picture"]);
+        //        unset($_SESSION["username"]);
+        //        unset($_SESSION["password"]);
+        //        unset($_SESSION["status"]);
+        unset($_SESSION["authToken"]);
+        //        unset($_SESSION["rank"]);
+        unset($_SESSION["login"]);
+        unset($_SESSION["status"]);
+        return TRUE;
+    }
 
+    public function checkOldPass($id, $password) {
 
-      public function checkOldPass($id, $password) {
+        $enPass = md5($password);
 
-      $enPass = md5($password);
+        $query = "SELECT `id` FROM `vendor` WHERE `id`= '" . $id . "' AND `password`= '" . $enPass . "'";
 
-      $query = "SELECT `id` FROM `vendor` WHERE `id`= '" . $id . "' AND `password`= '" . $enPass . "'";
+        $db = new Database();
 
-      $db = new Database();
+        $result = mysql_fetch_array($db->readQuery($query));
 
-      $result = mysql_fetch_array($db->readQuery($query));
+        if (!$result) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
 
-      if (!$result) {
-      return FALSE;
-      } else {
-      return TRUE;
-      }
-      }
+    public function changePassword($id, $password) {
 
-      public function changePassword($id, $password) {
+        $enPass = md5($password);
 
-      $enPass = md5($password);
+        $query = "UPDATE  `vendor` SET "
+                . "`password` ='" . $enPass . "' "
+                . "WHERE `id` = '" . $id . "'";
 
-      $query = "UPDATE  `vendor` SET "
-      . "`password` ='" . $enPass . "' "
-      . "WHERE `id` = '" . $id . "'";
+        $db = new Database();
 
-      $db = new Database();
+        $result = $db->readQuery($query);
 
-      $result = $db->readQuery($query);
+        if ($result) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 
-      if ($result) {
-      return TRUE;
-      } else {
-      return FALSE;
-      }
-      }
+    public function checkEmail($email) {
 
-      public function checkEmail($email) {
+        $query = "SELECT `email` FROM `vendor` WHERE `email`= '" . $email . "'";
 
-      $query = "SELECT `email` FROM `vendor` WHERE `email`= '" . $email . "'";
+        $db = new Database();
 
-      $db = new Database();
+        $result = mysql_fetch_array($db->readQuery($query));
 
-      $result = mysql_fetch_array($db->readQuery($query));
+        if (!$result) {
+            return FALSE;
+        } else {
+            return $result;
+        }
+    }
 
-      if (!$result) {
-      return FALSE;
-      } else {
-      return $result;
-      }
-      }
+    public function ChangeProPic($vendor, $file) {
 
+        $query = "UPDATE  `vendor` SET "
+                . "`profile_picture` ='" . $file . "' "
+                . "WHERE `id` = '" . $vendor . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if ($result) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    /*
       public function GenarateCode($email) {
 
       $rand = rand(10000, 99999);
@@ -409,22 +428,7 @@ class Vendor {
       }
       }
 
-      public function ChangeProPic($member, $file) {
 
-      $query = "UPDATE  `vendor` SET "
-      . "`profile_picture` ='" . $file . "' "
-      . "WHERE `id` = '" . $member . "'";
-
-      $db = new Database();
-
-      $result = $db->readQuery($query);
-
-      if ($result) {
-      return TRUE;
-      } else {
-      return FALSE;
-      }
-      }
 
       public function ChangeLicenceFrontPic($member, $file) {
 
