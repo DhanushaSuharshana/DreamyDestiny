@@ -4,7 +4,7 @@
     <!--Import Top navbar-->
     <?php include 'include/head.php'; ?>
 
-    <body>
+<body>
     <!--Import Top navbar-->
     <?php include 'include/TopNavbar.php'; ?>
     <!--Import Header section-->
@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li class="active">Sign Up Couple</li>
                     </ol>
                 </div>
