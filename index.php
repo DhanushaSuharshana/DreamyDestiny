@@ -34,16 +34,17 @@
                                     <div class="form-group col-md-3">
                                         <select class="form-control">
                                             <!--Fetch all the vendor categories-->
-                                            <option>Select Vendor</option>
-                                            <option value="Venue">Venue</option>
-                                            <option value="Photographer">Photographer</option>
-                                            <option value="Cake">Cake</option>
-                                            <option value="Dj">Dj</option>
-                                            <option value="Florist">Florist</option>
-                                            <option value="Videography">Videography</option>
-                                            <option value="jewellery">Jewellery</option>
-                                            <option value="Gifts">Gifts</option>
-                                            <option value="Dresses">Dresses</option>
+                                            <option value="">Select Vendor</option>
+                                            <option value="Venuw">Venue</option>
+                                            <option value="Photographers">Photographers & Videographers</option>
+                                            <option value="Forists">Forists</option>
+                                            <option value="Decorators">Decorators and Event Designers </option>
+                                            <option value="Dressmakers">Bridal and Formal Wear Shops </option>
+                                            <option value="Entertainment Providers">Entertainment Providers</option>
+                                            <option value="Salon">Salon / Hair and Makeup Artists</option>
+                                            <option value="Bakers">Cake Designers/Bakers</option>
+                                            <option value="Transportation Services">Transportation Services</option>
+                                            <option value="Officiants">Officiants</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3">
