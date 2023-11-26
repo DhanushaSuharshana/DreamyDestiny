@@ -8,14 +8,10 @@
 
 <!-- Flex Nav Script for venue listing -->
 <!--script type="text/javascript" src="js/bootstrap-select.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/header-sticky.js"></script>
-<script src="../../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script type="text/javascript" src="js/price-slider.js"></script--> 
 <!-- conflicted with index Flex Nav script -->
 
 <!-- Flex Nav Script for vendor listing-->
-<!-- <script src="js/navigation.js"></script>
 <script src="../../../code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script type="text/javascript" src="js/price-slider.js"></script> -->
 
