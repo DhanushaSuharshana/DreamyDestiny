@@ -15,12 +15,13 @@ class VenueType {
 
     public $id;
     public $name;
+    public $image_name;
     public $sort;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`name`,`sort` FROM `venue_type` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`name`,`image_name`,`sort` FROM `venue_type` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -28,6 +29,7 @@ class VenueType {
 
             $this->id = $result['id'];
             $this->name = $result['name'];
+            $this->image_name = $result['image_name'];
             $this->queue = $result['sort'];
             return $this;
         }
@@ -35,8 +37,9 @@ class VenueType {
 
     public function create() {
 
-        $query = "INSERT INTO `venue_type` (`name`,`sort`) VALUES  ('"
+        $query = "INSERT INTO `venue_type` (`name`,`image_name`,`sort`) VALUES  ('"
                 . $this->name . "','"
+                . $this->image_name . "','"
                 . $this->sort . "')";
 
         $db = new Database();
@@ -70,6 +73,7 @@ class VenueType {
 
         $query = "UPDATE  `venue_type` SET "
                 . "`name` ='" . $this->name . "', "
+                . "`image_name` ='" . $this->image_name . "', "
                 . "`sort` ='" . $this->sort . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
@@ -83,12 +87,14 @@ class VenueType {
             return FALSE;
         }
     }
+
     public function delete() {
-      
+
         $query = 'DELETE FROM `venue_type` WHERE id="' . $this->id . '"';
 
         $db = new Database();
 
         return $db->readQuery($query);
     }
+
 }

@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of AccommodationGeneralFacilities
+ * Description of VenueGeneralFacilities
  *
  * @author HP
  */
@@ -86,7 +86,7 @@ class VenueGeneralFacilities {
         }
     }
 
-    public function getAccommodationFacilityById($id) {
+    public function getVenueFacilityById($id) {
 
         $query = "SELECT * FROM `venue_general_facilities` WHERE `accommodation`= $id ORDER BY sort ASC";
 
