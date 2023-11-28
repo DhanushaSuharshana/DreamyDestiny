@@ -19,7 +19,7 @@
                 <ul class="listnone">
                     <li><a href="signup-couple.php" class=" ">I m couple</a></li>
                     <li><a href="signup-vendor.php">Are you vendor?</a></li>
-                    <li><a href="login-page.php">Log in</a></li>
+                    <li><a href="vendor/login.php">Log in</a></li>
                     <li>
                         <a role="button" data-toggle="collapse" href="#searcharea" aria-expanded="false" aria-controls="searcharea"> <i class="fa fa-search"></i> </a>
                     </li>
