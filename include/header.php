@@ -10,7 +10,7 @@
                 <div class="navigation" id="navigation">
                     <ul>
                         <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="about-us.php">About us</a></li>
                         <li><a href="venue-listing.php">Venue Listings</a>
                         </li>
                         <li><a href="#" title="Home" class="animsition-link">Wedding Services</a>
@@ -24,7 +24,7 @@
                                 <li><a href="music-listing.html">Music List</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="contact-us.php">Contact us</a></li>
                     </ul>
                 </div>
 

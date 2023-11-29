@@ -66,56 +66,57 @@ if (isset($_POST['create'])) {
     }
 }
 
-//if (isset($_POST['update'])) {
-//
-//    $VENUE = new Accommodation($_POST['id']);
-//
-//    $VENUE->name = $_POST['name'];
-//    $VENUE->address = $_POST['address'];
-//    $VENUE->email = $_POST['email'];
-//    $VENUE->phone = $_POST['phone'];
-//    $VENUE->website = $_POST['website'];
-//    $VENUE->city = $_POST['city'];
-//    $VENUE->type = $_POST['type'];
-//    $VENUE->member = $_POST['member'];
-//    $VENUE->description = $_POST['description'];
-//
-//    $VALID = new Validator();
-//    $VALID->check($VENUE, [
-//        'name' => ['required' => TRUE],
-//        'address' => ['required' => TRUE],
-//        'email' => ['required' => TRUE],
-//    ]);
-//
-//    if ($VALID->passed()) {
-//        $VENUE->update();
-//
-//        if (!isset($_SESSION)) {
-//            session_start();
-//        }
-//        $VALID->addError("Your changes saved successfully", 'success');
-//        $_SESSION['ERRORS'] = $VALID->errors();
-//
-//        header('Location: ' . $_SERVER['HTTP_REFERER']);
-//    } else {
-//
-//        if (!isset($_SESSION)) {
-//            session_start();
-//        }
-//
-//        $_SESSION['ERRORS'] = $VALID->errors();
-//
-//        header('Location: ' . $_SERVER['HTTP_REFERER']);
-//    }
-//}
-//
-//if (isset($_POST['save-data'])) {
-//
-//    foreach ($_POST['sort'] as $key => $img) {
-//        $key = $key + 1;
-//
-//        $VENUE = Accommodation::arrange($key, $img);
-//
-//        header('Location: ' . $_SERVER['HTTP_REFERER']);
-//    }
-//}
+if (isset($_POST['update'])) {
+
+    $VENUE = new Venue($_POST['id']);
+
+    $VENUE->name = $_POST['name'];
+    $VENUE->address = $_POST['address'];
+    $VENUE->map = $_POST['map'];
+    $VENUE->email = $_POST['email'];
+    $VENUE->phone = $_POST['phone'];
+    $VENUE->website = $_POST['website'];
+    $VENUE->city = $_POST['city'];
+    $VENUE->type = $_POST['type'];
+    $VENUE->vendor = $_POST['vendor'];
+    $VENUE->description = $_POST['description'];
+
+    $VALID = new Validator();
+    $VALID->check($VENUE, [
+        'name' => ['required' => TRUE],
+        'address' => ['required' => TRUE],
+        'email' => ['required' => TRUE],
+    ]);
+
+    if ($VALID->passed()) {
+        $VENUE->update();
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $VALID->addError("Your changes saved successfully", 'success');
+        $_SESSION['ERRORS'] = $VALID->errors();
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        $_SESSION['ERRORS'] = $VALID->errors();
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+}
+
+if (isset($_POST['save-data'])) {
+
+    foreach ($_POST['sort'] as $key => $img) {
+        $key = $key + 1;
+
+        $VENUE = Accommodation::arrange($key, $img);
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+}

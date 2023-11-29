@@ -77,14 +77,31 @@ $city_name = new City($VENUE->city);
 
                             <div class="page-header">
                                 <h1>Edit Venue Listing</h1>
+
                             </div>
                             <div class="panel panel-default">
-                                <div class="panel-heading"><i class="fa fa-pencil"></i> <?php echo $VENUE->name; ?></div>
+                                <div class="panel-heading"> 
+                                    <div class="dropdown">
+                                        <button class="dropbtn"><i class="fa fa-bars"></i></button>
+                                        <div class="dropdown-content text-left">
+                                            <a href="edit-venue-listing.php?id=<?php echo $VENUE->id; ?>"><i class="hover-menu-icon fa fa-pencil"></i>Edit</a>
+                                            <a href="add-venue-listing-photo.php?id=<?php echo $VENUE->id; ?>"><i class="hover-menu-icon fa fa-photo"></i>Manage Photos</a>
+                                            <a href="venue-facilities.php?id=<?php echo $VENUE->id; ?>"><i class="hover-menu-icon fa fa-check-square"></i>Manage Facilities</a>
+                                            <a href="venue-packages.php?id=<?php echo $VENUE->id; ?>"><i class="hover-menu-icon fa fa-bed"></i>Manage Packages</a>
+                                            <a href="#" class="menu-hover-delete-font delete-accommodation" data-id="<?php echo $VENUE->id; ?>"><i class="hover-menu-icon fa fa-trash-o"></i>Delete</a>
+                                        </div>
+                                    </div> 
+                                        <?php echo '     ' . $VENUE->name; ?> </div>
                                 <div class="panel-body">
                                     <div class="body">
                                         <div class="userccount">
                                             <div class="formpanel"> 
-                                                <form class="form-horizontal"  method="post" action="post-and-get/accommodation.php" enctype="multipart/form-data"> 
+                                                <?php
+                                                $vali = new Validator();
+
+                                                $vali->show_message();
+                                                ?>
+                                                <form class="form-horizontal"  method="post" action="post-and-get/venue.php" enctype="multipart/form-data"> 
                                                     <div class="col-md-12">
                                                         <div class="">
                                                             <div class="bottom-top">
@@ -128,7 +145,15 @@ $city_name = new City($VENUE->city);
                                                         </div>
                                                         <div class="">
                                                             <div class="bottom-top">
-                                                                <label for="Accomodation_type">Accomodation Type</label>
+                                                                <label for="Map">Map</label>
+                                                            </div>
+                                                            <div class="formrow">
+                                                                <input type="text" id="map" name="map" value="<?php echo $VENUE->map; ?>" class="form-control" placeholder="Please Enter Your Map">
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="bottom-top">
+                                                                <label for="Accomodation_type">Venue Type</label>
                                                             </div>
                                                             <div class="formrow">
                                                                 <select class="form-control" autocomplete="off" type="text" id="type" value="<?php echo $VENUE->type; ?>" autocomplete="off" name="type" required="TRUE">
@@ -167,9 +192,10 @@ $city_name = new City($VENUE->city);
 
                                                         <div class="top-bott50">
                                                             <div class="bottom-top">
-                                                                <input type="hidden" id="member" name="member" value="<?php echo $_SESSION['id']; ?>"/>
+                                                                <input type="hidden" id="vendor" name="member" value="<?php echo $_SESSION['id']; ?>"/>
                                                                 <input type="hidden" id="id" name="id" value="<?php echo $VENUE->id ?>"/>
                                                                 <button name="update" type="submit" class="btn btn-info center-block">Update</button>
+
                                                             </div>
                                                         </div> 
                                                     </div>  

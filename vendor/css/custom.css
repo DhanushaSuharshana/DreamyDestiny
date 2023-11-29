@@ -295,13 +295,13 @@ and open the template in the editor.
 }
 
 .uploadbox{
-    height: 230px;
+    height: 190px;
 }
 .plus-icon{
     padding-top: 60px;
 }
 .delete-icon{
-    margin: -70px 0px 0px 12px;
+    margin: -90px 0px 0px 05px;
     font-size: 20px;
     border: 2px dashed #ddd;
 }
@@ -399,7 +399,7 @@ and open the template in the editor.
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 0;
+/*    right: 0;*/
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
