@@ -2,7 +2,6 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 $VENDOR = new Vendor($_SESSION['id']);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +41,11 @@ $VENDOR = new Vendor($_SESSION['id']);
         include './header.php';
         ?> 
 
-        
+        <?php
+        include './dashboard-head.php';
+        ?> 
+
+
         <div class="main-container">
             <div class="container">
                 <div class="row">
@@ -168,7 +171,7 @@ $VENDOR = new Vendor($_SESSION['id']);
                                                     <?php foreach (District::all() as $key => $district) {
                                                         ?>
                                                         <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option><?php
-                                                    }
+                                                }
                                                     ?>
                                                 </select>
                                             </div>

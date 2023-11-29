@@ -53,6 +53,7 @@ if ($_POST['save']) {
         exit();
     } else {
         $VENDOR = new Vendor(NULL);
+        
         $result = $VENDOR->checkEmail($_POST['email']);
         if ($result) {
             $response['status'] = 'registered';

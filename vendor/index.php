@@ -6,8 +6,6 @@ $VENDOR = new Vendor($_SESSION['id']);
 <!DOCTYPE html>
 <html lang="en">
 
-
-    <!-- Mirrored from jituchauhan.com/wedding/wedding-new/dashboard-vendor.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 11:17:15 GMT -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +21,7 @@ $VENDOR = new Vendor($_SESSION['id']);
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <!--font awesome icon -->
-        <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <!-- favicon icon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -42,6 +40,10 @@ $VENDOR = new Vendor($_SESSION['id']);
 
         <?php
         include './header.php';
+        ?> 
+
+        <?php
+        include './dashboard-head.php';
         ?> 
 
         <div class="main-container">
@@ -86,11 +88,11 @@ $VENDOR = new Vendor($_SESSION['id']);
                 </div>
             </div>
         </div>
-      
-         <?php
+
+        <?php
         include './footer.php';
         ?> 
-        
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
