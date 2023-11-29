@@ -17,6 +17,7 @@ include_once(dirname(__FILE__) . '/Venue.php');
 include_once(dirname(__FILE__) . '/VenueFacilityDetails.php');
 include_once(dirname(__FILE__) . '/VenuePhoto.php');
 include_once(dirname(__FILE__) . '/VenuePackage.php');
+include_once(dirname(__FILE__) . '/VenuePackagePhoto.php');
 
 function dd($data) {
     var_dump($data);

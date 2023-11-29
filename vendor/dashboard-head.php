@@ -41,9 +41,8 @@
                     <li><a href="index.php"><i class="fa fa-dashboard db-icon"></i>My Dashboard</a></li>
                     <li><a href="profile.php"><i class="fa fa-user db-icon"></i>My Profile</a></li>
                     <li><a href="add-venue-listing.php"><i class="fa fa-plus-square db-icon"></i>Add Venue Listing</a></li>
-                    <li><a href="venue-listings.php"><i class="fa fa-map-marker db-icon"></i>My Venue Listings</a></li>
                     <li><a href="add-services-listing.php"><i class="fa fa-plus-square db-icon"></i>Add Services Listing</a></li>
-                    <li><a href="services-listings.php"><i class="fa fa-list db-icon"></i>My Services Listing</a></li>
+                    <li><a href="my-listings.php"><i class="fa fa-list db-icon"></i>My Listings</a></li>
                 </ul>
             </div>
         </div>

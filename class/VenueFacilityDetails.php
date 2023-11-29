@@ -107,5 +107,20 @@ class VenueFacilityDetails {
             return $result;
         }
     }
+    
+      public function getFacilitiesByVenueId($venue) {
+
+        $query = "SELECT `id`,`venue`,`facility` FROM `venue_facility_details` WHERE `venue`= '" . $venue . "'";
+
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        if (!$result) {
+            return FALSE;
+        } else {
+            return $result;
+        }
+    }
 
 }
