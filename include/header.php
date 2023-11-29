@@ -10,18 +10,12 @@
                 <div class="navigation" id="navigation">
                     <ul>
                         <li class="active"><a href="index.php">Home</a></li>
-                        <!--li><a href="#">Listing</a></li>
-                        <li><a href="vendor-details.html">Vendor</a>
-                            <ul>
-                                <li><a href="vendor-details.html">Vendor Simple</a></li>
-                                <li><a href="vendor-details-tabbed.html">Vendor Tabbed</a></li>
-                                <li><a href="vendor-profile.html">Vendor Profile</a></li>
-                            </ul>
-                        </li-->
-                        <li><a href="vendor-list.php" title="Home" class="animsition-link">Vendor Listing</a>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="venue-listing.php">Venue Listings</a>
+                        </li>
+                        <li><a href="#" title="Home" class="animsition-link">Wedding Services</a>
                             <ul>
                                 <!-- Fetch all the services  -->
-                                <li><a href="venue-listing.php">Venue List</a></li>
                                 <li><a href="photography-listing.html">Photographer List</a></li>
                                 <li><a href="dresses-listing.html">Dresses List</a></li>
                                 <li><a href="florist-listing.html">Florist List</a></li>
@@ -30,16 +24,10 @@
                                 <li><a href="music-listing.html">Music List</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Features</a>
-                            <ul>
-                                <li><a href="about-us.html">About us</a></li>
-                                <li><a href="contact-us.html">Contact us</a></li>
-                                <!--li><a href="wedding-guideline.html">Template Guideline</a></li-->
-                            </ul>
-                        </li>
+                        <li><a href="contact-us.html">Contact us</a></li>
                     </ul>
                 </div>
-            
+
             </div>
         </div>
     </div>

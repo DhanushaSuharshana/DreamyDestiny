@@ -44,6 +44,12 @@ $VENDOR = new Vendor($_SESSION['id']);
         include './header.php';
         ?> 
 
+
+        <?php
+        include './dashboard-head.php';
+        ?> 
+
+
         <div class="main-container">
             <div class="container">
                 <div class="row">
@@ -319,7 +325,7 @@ $VENDOR = new Vendor($_SESSION['id']);
         <script src="js/add-new-venue.js" type="text/javascript"></script>
         <script src="plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <script src="plugins/tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
-     
+
         <script>
             tinymce.init({
                 selector: "#description",
