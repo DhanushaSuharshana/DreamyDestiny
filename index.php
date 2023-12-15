@@ -156,7 +156,7 @@ $VENUE_TYPE_OBJ = new VenueType(NULL);
                                     <div class="item location-block">
                                         <!-- location block -->
                                         <div class="vendor-image">
-                                            <a href="#"><img src="upload/venue/types/<?php echo $venue_type['image_name'] ?>" alt="" class="img-responsive"></a> <a href="#" class="venue-lable"><span class="label label-default"><?php echo $venue_type['name'] ?></span></a> </div>
+                                            <a href="venue-listing.php?type=<?php echo $venue_type['id']?>"><img src="upload/venue/types/<?php echo $venue_type['image_name'] ?>" alt="" class="img-responsive"></a> <a href="#" class="venue-lable"><span class="label label-default"><?php echo $venue_type['name'] ?></span></a> </div>
                                     </div>
                                     <?php
                                 }
