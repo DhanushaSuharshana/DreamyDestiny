@@ -1,6 +1,6 @@
 $(document).ready(function() {
    "use strict";
-  $("#testimonial").owlCarousel({
+  $("#venue-type").owlCarousel({
   
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,

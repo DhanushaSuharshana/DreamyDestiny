@@ -132,7 +132,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 <!-- Text input-->
                                 <div class="form-group">
                                     <label class="control-label" for="password">Password</label>
-                                    <input id="password" name="password" type="text" placeholder="Password" class="form-control input-md" required>
+                                    <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" required>
                                 </div>
                                 <!-- Button -->
                                 <div class="form-group">
