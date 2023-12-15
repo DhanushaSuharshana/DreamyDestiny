@@ -14,8 +14,8 @@ $VENUE = new Venue($id);
 $PACKAGES = VenuePackage::getPackagesByVenueId($id);
 $PACKAGES_PHOTO = new VenuePackagePhoto(NULL);
 
-$VENUE_GENERAL_FACILITY = new VenueGeneralFacilities(NULL);
-$VENUE_FACILITY_DETAILS = new VenueFacilityDetails(NULL);
+$PACKAGES_GENERAL_FACILITY = new VenueGeneralFacilities(NULL);
+$PACKAGES_FACILITY_DETAILS = new VenueFacilityDetails(NULL);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -217,6 +217,63 @@ $VENUE_FACILITY_DETAILS = new VenueFacilityDetails(NULL);
                                                                         </div>
                                                                     </div>
                                                                 </div>
+
+                                                                <div class="row">
+                                                                    <?php
+                                                                    foreach ($PACKAGES as $key => $packages) {
+                                                                        ?>
+                                                                        <div class="col-md-4">
+                                                                            <div class="vendor-list-block mb30">
+                                                                                <!-- vendor list block -->
+                                                                                <div class="vendor-img">
+                                                                                    <?php
+                                                                                    if (count($PACKAGES_PHOTO) > 0) {
+                                                                                        foreach ($PACKAGES_PHOTO->getPackagePhotosById($packages['id']) as $key => $packages_p) {
+                                                                                            if ($key == 1) {
+                                                                                                break;
+                                                                                            }
+                                                                                            ?>
+                                                                                            <img src="" alt="" class="img-responsive">
+                                                                                            <a href="#"><img src="../upload/venue/packages/<?php echo $packages_p['image_name']; ?>" alt="wedding packages" class="img-responsive"></a>
+
+                                                                                            <?php
+                                                                                        }
+                                                                                    } else {
+                                                                                        ?> 
+                                                                                        <b style="padding-left: 15px;">No Venue Image.</b> 
+                                                                                    <?php } ?>
+
+                                                                                    <div class="category-badge"><a href="#" class="category-link">ghgh</a></div>
+
+                                                                                    <div class="favorite-action"> 
+                                                                                        <div class="fav-icon">
+                                                                                            <div class="dropdown">
+                                                                                                <button class="dropbtn"><i class="fa fa-bars"></i></button>
+                                                                                                <div class="dropdown-content text-left">
+                                                                                                    <a href="edit-venue-package.php?id=<?php echo $packages['id']; ?>"><i class="hover-menu-icon fa fa-pencil"></i>Edit</a>
+                                                                                                    <a href="add-venue-package-photo.php?id=<?php echo $packages['id']; ?>"><i class="hover-menu-icon fa fa-photo"></i>Manage Photos</a>
+                                                                                                    <a href="#" class="menu-hover-delete-font delete-accommodation" data-id="<?php echo $packages['id']; ?>"><i class="hover-menu-icon fa fa-trash-o"></i>Delete</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div> 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="vendor-detail">
+                                                                                    <!-- vendor details -->
+                                                                                    <div class="caption">
+                                                                                        <h2><a href="#" class="title"><?php echo $packages['name']; ?></a></h2>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- /.vendor details -->
+                                                                            </div>
+                                                                            <!-- /.vendor list block -->
+                                                                        </div>
+                                                                        <?php
+                                                                    }
+                                                                    ?>
+                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </div>

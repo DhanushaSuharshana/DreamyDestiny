@@ -309,7 +309,8 @@ background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.4
 
 /*------- Top Location ------------*/
 .top-location { }
-.location-block { margin-bottom: 30px; }
+.location-block { margin-bottom: 40px;    margin-left: 10px;
+    margin-right: 10px; }
 
 /*--------Testimonial ---------*/
 .tp-testimonial { }

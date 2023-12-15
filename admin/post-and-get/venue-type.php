@@ -25,7 +25,7 @@ if (isset($_POST['add-venue-type'])) {
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
         $handle->image_x = 500;
-        $handle->image_y = 420;
+        $handle->image_y = 300;
 
         $handle->Process($dir_dest);
 
@@ -78,7 +78,7 @@ if (isset($_POST['edit-venue-type'])) {
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
         $handle->image_x = 500;
-        $handle->image_y = 420;
+        $handle->image_y = 300;
 
         $handle->Process($dir_dest);
 
